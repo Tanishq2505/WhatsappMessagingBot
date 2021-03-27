@@ -27,7 +27,7 @@ def sending_message(contact, total_messages):
     user_input = input("Please Enter Your Message: ")
     sleep(0.5)
     while (i<total_messages):
-        text_box = '//div[@class="_1awRl copyable-text selectable-text"][@contenteditable="true"][@data-tab="6"]'
+        text_box = '//div[@class="_2_1wd copyable-text selectable-text"][@contenteditable="true"][@data-tab="6"]'
         driver.find_element_by_xpath(text_box).send_keys(f"{user_input}"+Keys.ENTER)
         sleep(1)
         i+=1
@@ -36,7 +36,7 @@ def searching_user(contact,total_messages):
     a=0
     print(len(contact))
     while (a<len(contact)):
-        search_box_id = '//div[@class="_1awRl copyable-text selectable-text"][@contenteditable="true"][@data-tab="3"]'
+        search_box_id = '//div[@class="_2_1wd copyable-text selectable-text"][@contenteditable="true"][@data-tab="3"]'
         driver.find_element_by_xpath(search_box_id).send_keys(contact[a])
         sleep(3)
         sending_message(contact[a],total_messages)
